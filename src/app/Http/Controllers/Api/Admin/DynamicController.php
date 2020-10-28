@@ -20,6 +20,8 @@ class DynamicController extends ApiController
             $configPermissions = $config['permission'];
             $has_value_inputs = collect($config['dropdown'])->map(function ($input) {
                 $inputLabels = $input['label'];
+                $inputModules = $input['module'];
+                $inputTypes = $input['type'];
                 $inputRoles = $input['roles'];
                 $inputPermissions = $input['permission'];
                 foreach ($inputRoles as $role) {
@@ -35,7 +37,6 @@ class DynamicController extends ApiController
                     array_splice($has_value_inputs, $index, 1);
                 }
             }
-
 
             $config['dropdown'] = $has_value_inputs;
             foreach ($configRoles as $role) {
@@ -56,4 +57,51 @@ class DynamicController extends ApiController
 
         return response()->json($configs);
     }
+
+    public function showUser()
+    {
+        $config = config('admin-menu-config')['user'];
+        $configLabels = $config['label'];
+        $configRoles = $config['roles'];
+        $configIcons = $config['icon'];
+        $configPermissions = $config['permission'];
+        $has_value_inputs = collect($config['dropdown'])->map(function ($input) {
+            $inputLabels = $input['label'];
+            $inputModules = $input['module'];
+            $inputTypes = $input['type'];
+            $inputRoles = $input['roles'];
+            $inputPermissions = $input['permission'];
+            foreach ($inputRoles as $role) {
+                return $input;
+            };
+            foreach ($inputPermissions as $permission) {
+                return $input;
+            };
+        });
+        return response()->json($config);
+    }
+
+    public function showScriptManager()
+    {
+        $config = config('admin-menu-config')['script-manager'];
+        $configLabels = $config['label'];
+        $configRoles = $config['roles'];
+        $configIcons = $config['icon'];
+        $configPermissions = $config['permission'];
+        $has_value_inputs = collect($config['dropdown'])->map(function ($input) {
+            $inputLabels = $input['label'];
+            $inputModules = $input['module'];
+            $inputTypes = $input['type'];
+            $inputRoles = $input['roles'];
+            $inputPermissions = $input['permission'];
+            foreach ($inputRoles as $role) {
+                return $input;
+            };
+            foreach ($inputPermissions as $permission) {
+                return $input;
+            };
+        });
+        return response()->json($config);
+    }
+
 }
