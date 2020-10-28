@@ -12,19 +12,14 @@ class DynamicController extends ApiController
 
     public function index()
     {
-        $user = $this->getAuthenticatedUser();
-
-        $configs   = config('admin-menu-config');
-        $configs = collect($configs)->map(function ($config) use ($user) {
-            $configRoles            = $config['roles'];
-            $userRoles =   $user->roles->pluck('slug')->toArray();
-            $has_value_inputs = collect($config['dropdown'])->map(function ($input) use ($userRoles) {
+        $configs = config('admin-menu-config');
+        $configs = collect($configs)->map(function ($config) {
+            $configRoles = $config['roles'];
+            $has_value_inputs = collect($config['dropdown'])->map(function ($input) {
                 $inputRoles = $input['roles'];
                 foreach ($inputRoles as $role) {
-                    if (in_array($role, $userRoles)) {
-                        return $input;
-                    };
-                }
+                    return $input;
+                };
             })->unique()->toArray();
 
             foreach ($has_value_inputs as $index => $has_value_input) {
@@ -35,10 +30,8 @@ class DynamicController extends ApiController
 
             $config['dropdown'] = $has_value_inputs;
             foreach ($configRoles as $role) {
-                if (in_array($role, $userRoles)) {
-                    return $config;
-                };
-            }
+                return $config;
+            };
         })->unique()->toArray();
 
         foreach ($configs as $index => $config) {
