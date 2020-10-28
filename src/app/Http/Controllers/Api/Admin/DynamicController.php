@@ -14,10 +14,18 @@ class DynamicController extends ApiController
     {
         $configs = config('admin-menu-config');
         $configs = collect($configs)->map(function ($config) {
+            $configLabels = $config['label'];
             $configRoles = $config['roles'];
+            $configIcons = $config['icon'];
+            $configPermissions = $config['permission'];
             $has_value_inputs = collect($config['dropdown'])->map(function ($input) {
+                $inputLabels = $input['label'];
                 $inputRoles = $input['roles'];
+                $inputPermissions = $input['permission'];
                 foreach ($inputRoles as $role) {
+                    return $input;
+                };
+                foreach ($inputPermissions as $permission) {
                     return $input;
                 };
             })->unique()->toArray();
@@ -28,8 +36,14 @@ class DynamicController extends ApiController
                 }
             }
 
+
             $config['dropdown'] = $has_value_inputs;
             foreach ($configRoles as $role) {
+                return $config;
+            };
+
+            $config['dropdown'] = $has_value_inputs;
+            foreach ($configPermissions as $permission) {
                 return $config;
             };
         })->unique()->toArray();
