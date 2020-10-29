@@ -1,16 +1,23 @@
 # Install :
 
-Để sử dụng package chạy : composer require webpress/dynamic-menu
+To include the package in your project, Please run following command.
+
+```
+composer require webpress/dynamic
+```
 
 # Config:
 
-để published file config của module chạy :
-php artisan vendor:publish --provider="VCComponent\Laravel\File\Providers\FileServiceProvider"
+Run the following commands to publish configuration and migration files :
+```
+php artisan vendor:publish --provider="VCComponent\Laravel\Dynamic\Providers\DynamicServiceProvider"
+```
 
-# Chọn module static-file đẻ publish file config
 
-Route Api:
-|Phương thức| URL|
 
-|GET | /api/admin/config/menu|
+# Route Api:
+
+| Verb | URI                                 |
+| ---- | ------------------------------------|
+| GET  |      /api/admin/config/menu         |
 
