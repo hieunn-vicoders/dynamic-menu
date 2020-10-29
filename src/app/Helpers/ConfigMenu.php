@@ -4,17 +4,17 @@ namespace VCComponent\Laravel\Dynamic\Helpers;
 
 class ConfigMenu
 {
-    const USER = "1";
-    const SCRIPT_MANAGER = "2";
-    const CONTACT = "3";
-    const LANGUAGE = "4";
-    const FOLLOW = "5";
-    const MEDIA = "6";
-    const POST = "7";
-    const ORTHER_POST = "8";
-    const PAGE = "9";
-    const PRODUCTS = "10";
-    const ORDER = "11";
-    const COMMENT = "12";
-    const TAG = "13";
+    const USER = "user";
+    const SCRIPT_MANAGER = "script_manager";
+    const CONTACT = "contact";
+    const LANGUAGE = "language";
+    const FOLLOW = "follow";
+    const MEDIA = "media";
+    const POST = "post";
+    const ORTHER_POST = "orther_post";
+    const PAGE = "page";
+    const PRODUCTS = "products";
+    const ORDER = "order";
+    const COMMENT = "comment";
+    const TAG = "tag";
 }
