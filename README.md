@@ -8,7 +8,7 @@ composer require webpress/dynamic
 
 # Config:
 
-Run the following commands to publish configuration and migration files :
+Run the following commands to publish configuration files :
 ```
 php artisan vendor:publish --provider="VCComponent\Laravel\Dynamic\Providers\DynamicServiceProvider"
 ```
