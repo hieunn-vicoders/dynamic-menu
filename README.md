@@ -19,5 +19,5 @@ php artisan vendor:publish --provider="VCComponent\Laravel\Dynamic\Providers\Dyn
 
 | Verb | URI                                 |
 | ---- | ------------------------------------|
-| GET  |      /api/admin/config/menu         |
+| GET  |      /api/admin/config/menus         |
 
