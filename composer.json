@@ -19,7 +19,7 @@
         }
     },
     "require": {
-        "webpress/core": "^0.0.1",
+        "webpress/core": "^0.1.0",
         "webpress/user-manager": "^0.0.4"
     },
     "require-dev": {
