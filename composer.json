@@ -1,5 +1,5 @@
 {
-    "name": "webpress/dynamic",
+    "name": "webpress/dynamic-menu",
     "description": "Boilerplate template for laravel package",
     "authors": [
         {
@@ -15,7 +15,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "VCComponent\\Laravel\\Package\\Test\\": "tests/"
+            "VCComponent\\Laravel\\Dynamic\\Test\\": "tests/"
         }
     },
     "require": {
