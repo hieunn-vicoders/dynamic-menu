@@ -3,6 +3,7 @@
 use VCComponent\Laravel\Dynamic\Helpers\ConfigMenu;
 
 return [
+    ConfigMenu::DASHBOARD,
     ConfigMenu::SYSTEM_USER,
     ConfigMenu::SYSTEM_SCRIPT,
     ConfigMenu::SYSTEM_ROLE,
@@ -23,5 +24,8 @@ return [
     ConfigMenu::ORDER,
     ConfigMenu::COMMENT,
     ConfigMenu::TAG,
-    ConfigMenu::FOLLOW
+    ConfigMenu::FOLLOW,
+    ConfigMenu::SETUP,
+    ConfigMenu::SEARCH_OPTIMIZATION,
+    ConfigMenu::STATISTICAL
 ];
