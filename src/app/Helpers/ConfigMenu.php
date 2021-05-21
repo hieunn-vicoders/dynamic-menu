@@ -4,6 +4,7 @@ namespace VCComponent\Laravel\Dynamic\Helpers;
 
 class ConfigMenu
 {
+    const DASHBOARD = "dashboard";
     const SYSTEM_USER = "system_user";
     const SYSTEM_SCRIPT = "system_script";
     const SYSTEM_ROLE = "system_role";
@@ -25,4 +26,7 @@ class ConfigMenu
     const COMMENT = "comment";
     const TAG = "tag";
     const FOLLOW = "follow";
+    const SETUP = "setup";
+    const SEARCH_OPTIMIZATION = "search-optimization";
+    const STATISTICAL = "statistical";
 }
